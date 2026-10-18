@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Chakra_Petch, Sansation } from "next/font/google";
+import MicroSlatsBackground from "../components/ui/MicroSlatsBackground";
 import "./globals.css";
 
 //? Configurando a Chakra Petch
@@ -25,7 +26,9 @@ export default function RootLayout({children,}: Readonly<{children: React.ReactN
   return (
     <html lang="pt-BR" className={`${chakraPetch.variable} ${sansation.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sansation">
-        {children}
+        <MicroSlatsBackground>
+          {children}
+        </MicroSlatsBackground>
       </body>
     </html>
   );
